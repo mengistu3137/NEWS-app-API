@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Web App - Real Time News</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>📰 News Hub</h1>
+      </header>
+
+      <!-- Login Section -->
+      <div id="loginSection" class="section">
+        <h2>Welcome to News Hub</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" value="user1" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" value="password1" required />
+          </div>
+          <button type="submit">Login to View News</button>
+        </form>
+        <div class="demo-credentials">
+          <p><strong>Demo Accounts:</strong></p>
+          <p>👤 user1 / password1</p>
+          <p>👤 user2 / password2</p>
+        </div>
+      </div>
+
+      <!-- News Section -->
+      <div id="newsSection" class="section hidden">
+        <div class="header-row">
+          <h2>🌍 Latest News</h2>
+          <div class="user-info">
+            <span>Welcome, <strong id="currentUser">User</strong></span>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+          </div>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="news-controls">
+          <form id="newsForm" class="news-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="search">Search News:</label>
+                <input
+                  type="text"
+                  id="search"
+                  placeholder="Enter keywords..."
+                />
+              </div>
+              <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category">
+                  <option value="general">General News</option>
+                  <option value="technology">Technology</option>
+                  <option value="sports">Sports</option>
+                  <option value="business">Business</option>
+                  <option value="entertainment">Entertainment</option>
+                  <option value="health">Health</option>
+                  <option value="science">Science</option>
+                </select>
+              </div>
+              <button type="submit">Search News</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="loadingSpinner" class="loading hidden">
+          <div class="spinner"></div>
+          <p>Loading latest news...</p>
+        </div>
+
+        <div id="newsResults" class="news-results">
+          <!-- News articles will be displayed here -->
+        </div>
+
+        <div id="errorMessage" class="error-message hidden">
+          <!-- Error messages will be displayed here -->
+        </div>
+
+        <div class="pagination" id="pagination">
+          <!-- Pagination controls -->
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
