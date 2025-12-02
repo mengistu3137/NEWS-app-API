@@ -104,12 +104,8 @@ The application has been tested across multiple layers to ensure reliability, co
 ---
 
 # 📸 **Screenshots**
+They are in public/screenshot folder
 
-| Login Page                         | Dashboard                              | News Display                      |
-| ---------------------------------- | -------------------------------------- | --------------------------------- |
-| ![](https://screenshots/login.png) | ![](https://screenshots/dashboard.png) | ![](https://screenshots/news.png) |
-
-> **Note:** Add real screenshots inside a `/screenshots` folder in your project.
 
 ---
 
